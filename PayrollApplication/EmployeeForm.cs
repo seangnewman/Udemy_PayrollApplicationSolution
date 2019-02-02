@@ -12,9 +12,28 @@ namespace PayrollApplication
 {
     public partial class EmployeeForm : Form
     {
+
+        bool isNumberOrBackspace;
+
+        const int backspace_key = 8;
+
         public EmployeeForm()
         {
             InitializeComponent();
+        }
+
+        private bool validNumericInput(char input)
+        {
+          bool numberOrBackspace  = false;
+
+            // Constrain input to numeric digits, exclude characters and backspace
+            if (char.IsNumber(input) ||   char.GetNumericValue(input)== backspace_key)
+            {
+                numberOrBackspace = true;
+            }
+
+            return numberOrBackspace;
+           
         }
 
         private void lblNationalInsuranceFile_Click(object sender, EventArgs e)
@@ -75,6 +94,27 @@ namespace PayrollApplication
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtEmployeeID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isNumberOrBackspace = validNumericInput(e.KeyChar);
+
+            if (!isNumberOrBackspace)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isNumberOrBackspace = validNumericInput(e.KeyChar);
+
+            if (!isNumberOrBackspace)
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }

@@ -262,6 +262,7 @@
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeeID.TabIndex = 0;
+            this.txtEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeID_KeyPress);
             // 
             // lblEmployeeID
             // 
@@ -300,8 +301,9 @@
             // txtNotes
             // 
             this.txtNotes.Location = new System.Drawing.Point(108, 232);
+            this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(218, 20);
+            this.txtNotes.Size = new System.Drawing.Size(218, 96);
             this.txtNotes.TabIndex = 19;
             // 
             // lblNotes
@@ -335,6 +337,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(218, 20);
             this.txtPhoneNumber.TabIndex = 17;
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // lblPhoneNumber
             // 
