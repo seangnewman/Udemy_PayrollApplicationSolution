@@ -106,7 +106,7 @@
             this.cbUnionMembership.Location = new System.Drawing.Point(157, 315);
             this.cbUnionMembership.Name = "cbUnionMembership";
             this.cbUnionMembership.Size = new System.Drawing.Size(72, 17);
-            this.cbUnionMembership.TabIndex = 12;
+            this.cbUnionMembership.TabIndex = 11;
             this.cbUnionMembership.Text = "IsMember";
             this.cbUnionMembership.UseVisualStyleBackColor = true;
             this.cbUnionMembership.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -127,7 +127,7 @@
             this.grpMaritalStatus.Location = new System.Drawing.Point(22, 240);
             this.grpMaritalStatus.Name = "grpMaritalStatus";
             this.grpMaritalStatus.Size = new System.Drawing.Size(301, 51);
-            this.grpMaritalStatus.TabIndex = 7;
+            this.grpMaritalStatus.TabIndex = 8;
             this.grpMaritalStatus.TabStop = false;
             this.grpMaritalStatus.Text = "Marital Status";
             // 
@@ -137,7 +137,7 @@
             this.rdbSingle.Location = new System.Drawing.Point(156, 19);
             this.rdbSingle.Name = "rdbSingle";
             this.rdbSingle.Size = new System.Drawing.Size(54, 17);
-            this.rdbSingle.TabIndex = 1;
+            this.rdbSingle.TabIndex = 10;
             this.rdbSingle.TabStop = true;
             this.rdbSingle.Text = "Single";
             this.rdbSingle.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.rdbMarried.Location = new System.Drawing.Point(87, 19);
             this.rdbMarried.Name = "rdbMarried";
             this.rdbMarried.Size = new System.Drawing.Size(60, 17);
-            this.rdbMarried.TabIndex = 0;
+            this.rdbMarried.TabIndex = 9;
             this.rdbMarried.TabStop = true;
             this.rdbMarried.Text = "Married";
             this.rdbMarried.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(166, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.Value = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
             // 
             // label1
@@ -179,7 +179,7 @@
             this.txtNationalInsuranceNumber.Location = new System.Drawing.Point(157, 180);
             this.txtNationalInsuranceNumber.Name = "txtNationalInsuranceNumber";
             this.txtNationalInsuranceNumber.Size = new System.Drawing.Size(166, 20);
-            this.txtNationalInsuranceNumber.TabIndex = 8;
+            this.txtNationalInsuranceNumber.TabIndex = 6;
             // 
             // lblNationalInsuranceFile
             // 
@@ -198,7 +198,7 @@
             this.grpGender.Location = new System.Drawing.Point(22, 112);
             this.grpGender.Name = "grpGender";
             this.grpGender.Size = new System.Drawing.Size(301, 51);
-            this.grpGender.TabIndex = 6;
+            this.grpGender.TabIndex = 3;
             this.grpGender.TabStop = false;
             this.grpGender.Text = "Gender";
             // 
@@ -208,7 +208,7 @@
             this.rdbFemaile.Location = new System.Drawing.Point(156, 19);
             this.rdbFemaile.Name = "rdbFemaile";
             this.rdbFemaile.Size = new System.Drawing.Size(59, 17);
-            this.rdbFemaile.TabIndex = 1;
+            this.rdbFemaile.TabIndex = 5;
             this.rdbFemaile.TabStop = true;
             this.rdbFemaile.Text = "Female";
             this.rdbFemaile.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             this.rdbMaile.Location = new System.Drawing.Point(87, 19);
             this.rdbMaile.Name = "rdbMaile";
             this.rdbMaile.Size = new System.Drawing.Size(48, 17);
-            this.rdbMaile.TabIndex = 0;
+            this.rdbMaile.TabIndex = 4;
             this.rdbMaile.TabStop = true;
             this.rdbMaile.Text = "Male";
             this.rdbMaile.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(105, 51);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(218, 20);
-            this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TabIndex = 1;
             // 
             // lblFirstName
             // 
@@ -245,7 +245,7 @@
             this.txtLastName.Location = new System.Drawing.Point(105, 77);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(218, 20);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -261,7 +261,7 @@
             this.txtEmployeeID.Location = new System.Drawing.Point(105, 25);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(218, 20);
-            this.txtEmployeeID.TabIndex = 1;
+            this.txtEmployeeID.TabIndex = 0;
             // 
             // lblEmployeeID
             // 
@@ -302,7 +302,7 @@
             this.txtNotes.Location = new System.Drawing.Point(108, 232);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(218, 20);
-            this.txtNotes.TabIndex = 26;
+            this.txtNotes.TabIndex = 19;
             // 
             // lblNotes
             // 
@@ -318,7 +318,7 @@
             this.txtEmailAddress.Location = new System.Drawing.Point(108, 206);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(218, 20);
-            this.txtEmailAddress.TabIndex = 24;
+            this.txtEmailAddress.TabIndex = 18;
             // 
             // lblEmailAddress
             // 
@@ -334,7 +334,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(108, 180);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(218, 20);
-            this.txtPhoneNumber.TabIndex = 22;
+            this.txtPhoneNumber.TabIndex = 17;
             // 
             // lblPhoneNumber
             // 
@@ -348,6 +348,7 @@
             // cboCountry
             // 
             this.cboCountry.FormattingEnabled = true;
+            this.cboCountry.ItemHeight = 13;
             this.cboCountry.Items.AddRange(new object[] {
             "Select Country ...",
             "Åland Islands",
@@ -617,7 +618,7 @@
             this.cboCountry.Location = new System.Drawing.Point(108, 116);
             this.cboCountry.Name = "cboCountry";
             this.cboCountry.Size = new System.Drawing.Size(218, 21);
-            this.cboCountry.TabIndex = 20;
+            this.cboCountry.TabIndex = 16;
             // 
             // lblCountry
             // 
@@ -633,7 +634,7 @@
             this.txtCity.Location = new System.Drawing.Point(108, 51);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(218, 20);
-            this.txtCity.TabIndex = 18;
+            this.txtCity.TabIndex = 13;
             // 
             // lblCity
             // 
@@ -649,7 +650,7 @@
             this.txtPostCode.Location = new System.Drawing.Point(260, 77);
             this.txtPostCode.Name = "txtPostCode";
             this.txtPostCode.Size = new System.Drawing.Size(65, 20);
-            this.txtPostCode.TabIndex = 16;
+            this.txtPostCode.TabIndex = 15;
             // 
             // lblPostCode
             // 
@@ -665,7 +666,7 @@
             this.txtAddress.Location = new System.Drawing.Point(108, 25);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(218, 20);
-            this.txtAddress.TabIndex = 14;
+            this.txtAddress.TabIndex = 12;
             this.txtAddress.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // lblAddress
@@ -687,7 +688,7 @@
             this.btnPreview.Location = new System.Drawing.Point(535, 418);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(123, 36);
-            this.btnPreview.TabIndex = 11;
+            this.btnPreview.TabIndex = 24;
             this.btnPreview.Text = "Pre&view";
             this.btnPreview.UseVisualStyleBackColor = false;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
@@ -701,7 +702,7 @@
             this.btnReset.Location = new System.Drawing.Point(406, 418);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(123, 36);
-            this.btnReset.TabIndex = 10;
+            this.btnReset.TabIndex = 23;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -715,7 +716,7 @@
             this.btnDeleteEmployee.Location = new System.Drawing.Point(277, 418);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
             this.btnDeleteEmployee.Size = new System.Drawing.Size(123, 36);
-            this.btnDeleteEmployee.TabIndex = 9;
+            this.btnDeleteEmployee.TabIndex = 22;
             this.btnDeleteEmployee.Text = "&Delete Employee";
             this.btnDeleteEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeleteEmployee.UseVisualStyleBackColor = false;
@@ -730,7 +731,7 @@
             this.btnUpdateEmployee.Location = new System.Drawing.Point(146, 418);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
             this.btnUpdateEmployee.Size = new System.Drawing.Size(125, 36);
-            this.btnUpdateEmployee.TabIndex = 8;
+            this.btnUpdateEmployee.TabIndex = 21;
             this.btnUpdateEmployee.Text = "&Update Employee";
             this.btnUpdateEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdateEmployee.UseVisualStyleBackColor = false;
@@ -745,7 +746,7 @@
             this.btnAddEmployees.Location = new System.Drawing.Point(29, 418);
             this.btnAddEmployees.Name = "btnAddEmployees";
             this.btnAddEmployees.Size = new System.Drawing.Size(111, 36);
-            this.btnAddEmployees.TabIndex = 7;
+            this.btnAddEmployees.TabIndex = 20;
             this.btnAddEmployees.Text = "&Add Employee";
             this.btnAddEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddEmployees.UseVisualStyleBackColor = false;
@@ -760,7 +761,7 @@
             this.btnExit.Location = new System.Drawing.Point(664, 418);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(123, 36);
-            this.btnExit.TabIndex = 2;
+            this.btnExit.TabIndex = 25;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -777,6 +778,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
             this.comboBox1.Items.AddRange(new object[] {
             "Select State :",
             "AL",
@@ -832,7 +834,7 @@
             this.comboBox1.Location = new System.Drawing.Point(108, 76);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 28;
+            this.comboBox1.TabIndex = 14;
             // 
             // EmployeeForm
             // 
