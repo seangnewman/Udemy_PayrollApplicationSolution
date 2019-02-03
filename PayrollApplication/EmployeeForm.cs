@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 namespace PayrollApplication
 {
@@ -35,6 +31,42 @@ namespace PayrollApplication
             return numberOrBackspace;
            
         }
+        #region regexExpressions
+        Regex objEmployeeID = new Regex("^[0-9]{3,4}$");
+        Regex objFirstName = new Regex("^[A-Z][a-zA-Z]*$");
+        Regex objLastName = new Regex("^[A-Z][a-zA-Z]*$");
+
+        // *** UK Insurance Number ***
+        // Must be 9 Characters
+        //First 2 characters are alpha characters
+        // Next 6 numbers are numeric
+        // Final character can only be A, B, C, D or space
+        // First character must not be D, F, I, Q, U or V
+        // Example SB123456C
+        // Regex objNI = new Regex(@"^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-D\s]$");
+
+        //***  US SSN Number Validation ***
+        // Must be 9 digits
+        // Can be accepted as 123456789
+        // or 123-45-6789
+        //000-00-0000
+        //Regex objSSN = new Regex(@"^\d{3}-?\d{2}-?\d{4}$");
+
+        // Accepts eitehr NI or SSN number as input
+        Regex objNNI = new Regex(@"^\d{3}-?\d{2}-?\d{4}$|^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-D\s]$");
+
+
+        // email validation
+        // example somevalue@somewhere.someaddress
+        //somevalue : up to 30 characters and digits 
+        // somewhere : up to 30 characters and digits 
+        //someaddress : minumum of 2 characters  up to 30
+       Regex objEmail = new Regex(@"^[a-zA-Z0-9]{1,30}@[a-zA-Z0-9]{1,30}.[a-zA-Z]{2,30}$");
+        
+
+        #endregion
+
+
 
         private bool validStringInput(TextBox inputValue)
         {
@@ -121,18 +153,16 @@ namespace PayrollApplication
             bool contolDataValid = true;
 
             //Test the employeeID
-            contolDataValid = validStringInput(txtEmployeeID);
-
-            // Test the Last Name
-            contolDataValid = !contolDataValid?false: validStringInput(txtLastName);
+            contolDataValid = validStringInput(txtEmployeeID) && validPatternMatch(objEmployeeID, txtEmployeeID);
             // Test the First Name
-            contolDataValid = !contolDataValid ? false : validStringInput(txtFirstName);
+            contolDataValid = !contolDataValid ? false : validStringInput(txtFirstName)  && validPatternMatch(objFirstName, txtFirstName);
             // Test the Last Name
-            contolDataValid = !contolDataValid ? false : validStringInput(txtLastName);
+            contolDataValid = !contolDataValid ? false : validStringInput(txtLastName) && validPatternMatch(objLastName, txtLastName);
+
             // Test Gender
             contolDataValid = !contolDataValid ? false : validRadioInput(rdbMaile, rdbFemaile);
             // Test National Insurance
-            contolDataValid = !contolDataValid ? false : validStringInput(txtNationalInsuranceNumber);
+            contolDataValid = !contolDataValid ? false : validStringInput(txtNationalInsuranceNumber) && validPatternMatch(objNNI, txtNationalInsuranceNumber);
             // Test Marital Status
             contolDataValid = !contolDataValid ? false : validRadioInput(rdbMarried, rdbSingle);
 
@@ -154,12 +184,45 @@ namespace PayrollApplication
             contolDataValid = !contolDataValid ? false : validStringInput(txtPhoneNumber);
 
             // Test email
-            contolDataValid = !contolDataValid ? false : validStringInput(txtEmailAddress);
+            contolDataValid = !contolDataValid ? false : validStringInput(txtEmailAddress) && validPatternMatch(objEmail, txtEmailAddress) && validateEmailAddress(txtEmailAddress);
 
             // Test Notes
             contolDataValid = !contolDataValid ? false : validNoteInput(txtNotes);
 
             return contolDataValid;
+        }
+
+        public bool validPatternMatch(Regex pattern, TextBox inputValue)
+        {
+            if (!pattern.IsMatch(inputValue.Text))
+            {
+                MessageBox.Show("Please enter " + inputValue.Name.ToString(), "Data Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                inputValue.Focus();
+                inputValue.BackColor = Color.OrangeRed;
+                return false;
+            }
+            else
+            {
+                inputValue.BackColor = Color.White;
+            }
+            return true;
+        }
+
+        public bool validateEmailAddress(TextBox inputValue)
+        {
+            try
+            {
+                MailAddress objMail = new MailAddress(inputValue.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + inputValue.Name.ToString() + " " + ex.Message, "Data Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                inputValue.Focus();
+                inputValue.BackColor = Color.OrangeRed;
+                return false;
+            }
+
+            return true;
         }
 
         private void lblNationalInsuranceFile_Click(object sender, EventArgs e)
