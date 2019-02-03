@@ -49,6 +49,8 @@
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.grpEmployeeContactDetails = new System.Windows.Forms.GroupBox();
+            this.cboState = new System.Windows.Forms.ComboBox();
+            this.lblState = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.lblNotes = new System.Windows.Forms.Label();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployees = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblState = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.grpEmployeeInformation.SuspendLayout();
             this.grpMaritalStatus.SuspendLayout();
             this.grpGender.SuspendLayout();
@@ -262,6 +262,7 @@
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeeID.TabIndex = 0;
+            this.txtEmployeeID.TextChanged += new System.EventHandler(this.txtEmployeeID_TextChanged);
             this.txtEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeID_KeyPress);
             // 
             // lblEmployeeID
@@ -275,7 +276,7 @@
             // 
             // grpEmployeeContactDetails
             // 
-            this.grpEmployeeContactDetails.Controls.Add(this.comboBox1);
+            this.grpEmployeeContactDetails.Controls.Add(this.cboState);
             this.grpEmployeeContactDetails.Controls.Add(this.lblState);
             this.grpEmployeeContactDetails.Controls.Add(this.txtNotes);
             this.grpEmployeeContactDetails.Controls.Add(this.lblNotes);
@@ -297,6 +298,76 @@
             this.grpEmployeeContactDetails.TabIndex = 1;
             this.grpEmployeeContactDetails.TabStop = false;
             this.grpEmployeeContactDetails.Text = "Employee Contact Details";
+            // 
+            // cboState
+            // 
+            this.cboState.FormattingEnabled = true;
+            this.cboState.ItemHeight = 13;
+            this.cboState.Items.AddRange(new object[] {
+            "Select State :",
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"});
+            this.cboState.Location = new System.Drawing.Point(108, 76);
+            this.cboState.Name = "cboState";
+            this.cboState.Size = new System.Drawing.Size(78, 21);
+            this.cboState.TabIndex = 14;
+            // 
+            // lblState
+            // 
+            this.lblState.AutoSize = true;
+            this.lblState.Location = new System.Drawing.Point(22, 85);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(38, 13);
+            this.lblState.TabIndex = 27;
+            this.lblState.Text = "State :";
             // 
             // txtNotes
             // 
@@ -769,76 +840,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblState
-            // 
-            this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(22, 85);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(38, 13);
-            this.lblState.TabIndex = 27;
-            this.lblState.Text = "State :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Select State :",
-            "AL",
-            "AK",
-            "AZ",
-            "AR",
-            "CA",
-            "CO",
-            "CT",
-            "DE",
-            "FL",
-            "GA",
-            "HI",
-            "ID",
-            "IL",
-            "IN",
-            "IA",
-            "KS",
-            "KY",
-            "LA",
-            "ME",
-            "MD",
-            "MA",
-            "MI",
-            "MN",
-            "MS",
-            "MO",
-            "MT",
-            "NE",
-            "NV",
-            "NH",
-            "NJ",
-            "NM",
-            "NY",
-            "NC",
-            "ND",
-            "OH",
-            "OK",
-            "OR",
-            "PA",
-            "RI",
-            "SC",
-            "SD",
-            "TN",
-            "TX",
-            "UT",
-            "VT",
-            "VA",
-            "WA",
-            "WV",
-            "WI",
-            "WY"});
-            this.comboBox1.Location = new System.Drawing.Point(108, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 14;
-            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -912,7 +913,7 @@
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnPreview;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboState;
         private System.Windows.Forms.Label lblState;
     }
 }
