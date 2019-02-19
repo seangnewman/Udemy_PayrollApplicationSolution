@@ -225,6 +225,8 @@ namespace PayrollApplication
             return true;
         }
 
+       
+
         private void lblNationalInsuranceFile_Click(object sender, EventArgs e)
         {
 
@@ -275,7 +277,28 @@ namespace PayrollApplication
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Form Reset");
+            txtEmployeeID.Clear();
+            txtFirstName.Clear();
+            txtLastName.Text = "";
+            txtNationalInsuranceNumber.Text = "";
+            txtAddress.Text = "";
+            txtCity.Text = null;
+            txtPostCode.Text = "";
+            txtEmailAddress.Text = "";
+            txtNotes.Text = "";
+            txtPhoneNumber.Text = "";
+
+            rdbMaile.Checked = false;
+            rdbFemaile.Checked = false;
+            rdbMarried.Checked = false;
+            rdbSingle.Checked = false;
+
+            cbUnionMembership.Checked = false;
+            cboCountry.SelectedIndex = 0;
+            cboState.SelectedIndex = 0;
+           
+            dtpDateOfBirth.Value = new DateTime(1998, 12, 31);
+
         }
 
         private void btnPreview_Click(object sender, EventArgs e)

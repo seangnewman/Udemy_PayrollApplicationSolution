@@ -35,7 +35,7 @@
             this.grpMaritalStatus = new System.Windows.Forms.GroupBox();
             this.rdbSingle = new System.Windows.Forms.RadioButton();
             this.rdbMarried = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNationalInsuranceNumber = new System.Windows.Forms.TextBox();
             this.lblNationalInsuranceFile = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.grpEmployeeInformation.Controls.Add(this.cbUnionMembership);
             this.grpEmployeeInformation.Controls.Add(this.lblUnionMembership);
             this.grpEmployeeInformation.Controls.Add(this.grpMaritalStatus);
-            this.grpEmployeeInformation.Controls.Add(this.dateTimePicker1);
+            this.grpEmployeeInformation.Controls.Add(this.dtpDateOfBirth);
             this.grpEmployeeInformation.Controls.Add(this.label1);
             this.grpEmployeeInformation.Controls.Add(this.txtNationalInsuranceNumber);
             this.grpEmployeeInformation.Controls.Add(this.lblNationalInsuranceFile);
@@ -153,16 +153,16 @@
             this.rdbMarried.Text = "Married";
             this.rdbMarried.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 214);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(166, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.Value = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(157, 214);
+            this.dtpDateOfBirth.MaxDate = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
+            this.dtpDateOfBirth.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(166, 20);
+            this.dtpDateOfBirth.TabIndex = 7;
+            this.dtpDateOfBirth.Value = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -893,7 +893,7 @@
         private System.Windows.Forms.GroupBox grpMaritalStatus;
         private System.Windows.Forms.RadioButton rdbSingle;
         private System.Windows.Forms.RadioButton rdbMarried;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtNotes;
